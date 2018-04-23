@@ -1,7 +1,35 @@
 # CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
-
+Aim is to control the car using PID contoller with hayper-parameter tuning
 ---
+## Reflections
+
+### PID control 
+
+In order to smoothen the control of a robot, we tune PID hyper parameters so that it reaches close to reference state with minimal noise. 
+
+#### Proportional term
+
+For this project and also in general, P term contribubtes mostly to the control.
+
+#### Integral term
+
+For this particular application, the control is very sensitive to Integral term. I noticed that small change in I term produced very unstable results as shown in this image. 
+
+
+![Sensitive](https://github.com/superbug7/PID-controller/blob/master/image_2.jpg)
+
+#### Differential term
+
+Carefully selecting D term made car smoother on the track. Car control is not overly sensitive to D term. 
+
+
+#### Final PID settings
+
+Keeping I term to 0.0 produced good results for this track. 
+
+![Correct](https://github.com/superbug7/PID-controller/blob/master/image_1.jpg)
+
+
 
 ## Dependencies
 
